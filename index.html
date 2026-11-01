@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MundoBanderas - Enciclopedia & Vexilología SVG</title>
+    <meta name="description" content="Aplicación interactiva y enciclopedia de banderas del mundo en formato vectorial SVG Ultra HD, trivia y juegos de banderas, comparador vexilológico cromático, taller de diseño de banderas personalizadas y descarga de lotes en ZIP." />
+    <meta property="og:title" content="MundoBanderas - Enciclopedia & Vexilología SVG" />
+    <meta property="og:description" content="Aplicación interactiva y enciclopedia de banderas del mundo en formato vectorial SVG Ultra HD, trivia y juegos de banderas, comparador vexilológico cromático, taller de diseño de banderas personalizadas y descarga de lotes en ZIP." />
+    <script>
+      // Defensive guard for sandboxed environments where window.fetch is getter-only
+      try {
+        if (typeof window !== 'undefined' && window.fetch) {
+          const originalFetch = window.fetch.bind(window);
+          let currentFetch = originalFetch;
+          try {
+            Object.defineProperty(window, 'fetch', {
+              get() {
+                return currentFetch;
+              },
+              set(fn) {
+                currentFetch = typeof fn === 'function' ? fn : originalFetch;
+              },
+              configurable: true,
+              enumerable: true,
+            });
+          } catch (e) {
+            // Fail safely if descriptor cannot be modified
+          }
+        }
+      } catch (err) {
+        // Silently continue
+      }
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

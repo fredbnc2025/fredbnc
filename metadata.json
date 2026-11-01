@@ -1,0 +1,6 @@
+{
+  "name": "MundoBanderas - Enciclopedia & Vexilología SVG",
+  "description": "Aplicación interactiva y enciclopedia de banderas del mundo en formato vectorial SVG Ultra HD, trivia y juegos de banderas, comparador vexilológico cromático, taller de diseño de banderas personalizadas y descarga de lotes en ZIP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

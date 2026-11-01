@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+.cursor-grab {
+  cursor: -webkit-grab !important;
+  cursor: grab !important;
+}
+
+.cursor-grabbing {
+  cursor: -webkit-grabbing !important;
+  cursor: grabbing !important;
+}
+
+/* Custom Leaflet Dark / High-Definition Enhancements */
+.leaflet-container {
+  background-color: #030712 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(3, 7, 18, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(3, 7, 18, 0.92) !important;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4) !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  color: #38bdf8 !important;
+  border-color: rgba(51, 65, 85, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: rgba(30, 41, 59, 0.95) !important;
+  color: #ffffff !important;
+}
+
+.leaflet-custom-tooltip {
+  background: rgba(2, 6, 23, 0.92) !important;
+  backdrop-filter: blur(8px) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+  padding: 4px 8px !important;
+}
+
+.leaflet-custom-tooltip:before {
+  border-top-color: rgba(2, 6, 23, 0.92) !important;
+}
+
+/* Print Optimization for 1-Page Letter/Bond PDF Sheets */
+@media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header, footer, nav, button, #country-pdf-modal-card > div:first-child, #country-pdf-modal-card > div:last-child {
+    display: none !important;
+  }
+
+  #country-pdf-modal-backdrop {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  #country-pdf-modal-card {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  [id^="pdf-sheet-p1-"] {
+    width: 100% !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    box-shadow: none !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+    break-after: page !important;
+  }
+
+  [id^="pdf-sheet-p2-"] {
+    width: 100% !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    box-shadow: none !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  [id^="pdf-sheet-"] {
+    box-shadow: none !important;
+  }
+}
+
+
